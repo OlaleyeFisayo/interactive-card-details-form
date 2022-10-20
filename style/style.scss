@@ -221,6 +221,11 @@ body {
             font-size: 0.9rem;
             margin-top: 25px;
             cursor: pointer;
+            transition: 500ms ease-in-out;
+        }
+
+        #confirmOne:hover {
+            background: $dark-grayish-violet;
         }
 
     }
@@ -254,6 +259,11 @@ body {
             font-weight: 300;
             font-size: 0.9rem;
             cursor: pointer;
+            transition: 500ms ease-in-out;
+        }
+
+        #confirmTwo:hover {
+            background: $dark-grayish-violet;
         }
     }
 }
@@ -308,10 +318,9 @@ body {
         .cardBack {
 
             .cvc {
-                position: relative;
-                display: inline;
-                left: 78%;
-                top: 43%;
+                display: block;
+                text-align: right;
+                margin-top: 80px;
             }
         }
     }
@@ -376,14 +385,15 @@ body {
 
             .cvc {
                 font-size: 1.15rem;
-                left: 76%;
-                top: 42%;
+                display: block;
+                text-align: right;
+                margin-top: 69px;
             }
         }
     }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 719px) {
     .grid {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -413,6 +423,12 @@ body {
         .cardFront {
             margin-top: -80px;
         }
+
+        .cardBack {
+            .cvc {
+                padding-right: 40px;
+            }
+        }
     }
 
     .cardDetails{
@@ -436,6 +452,7 @@ body {
 
         .cardFront {
             padding: 10px 15px;
+            margin-top: -70px;
 
             .circle-flex {
                 .white-circle {
@@ -466,8 +483,10 @@ body {
 
             .cvc {
                 font-size: 1rem;
-                left: 76%;
-                top: 42%;
+                display: block;
+                text-align: right;
+                margin-top: 62px;
+                padding-right: 35px;
             }
         }
     }
@@ -498,7 +517,7 @@ body {
 
         .cardFront,
         .cardBack {
-            width: 232px;
+            width: 230.5px;
             height: 126px;
             margin-right: 30px;
         }
@@ -521,8 +540,10 @@ body {
 
             .cvc {
                 font-size: 0.8rem;
-                left: 76%;
-                top: 40%;
+                display: block;
+                text-align: right;
+                margin-top: 53px;
+                padding-right: 30px;
             }
         }
     }
