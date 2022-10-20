@@ -19,6 +19,9 @@ pattern = cardNumberInput.dataset.pattern.split('');
 
 // align inputs with card 
 cardNameInput.addEventListener('input', ()=> {
+    if(cardNameInput.value.length == 26) {
+        return;
+    }
     cardName.textContent = cardNameInput.value.toUpperCase();
     if(cardNameInput.value == "") {
         cardName.textContent =  "JANE APPLESEED"
@@ -101,6 +104,9 @@ yearInput.addEventListener('input', ()=> {
 })
 
 cvcInput.addEventListener('input', ()=> {
+    if(cvcInput.value.length == 3) {
+        return
+    }
     cvc.textContent = cvcInput.value;
     if(cvcInput.value == "") {
         cvc.textContent = "000";
