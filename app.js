@@ -28,6 +28,17 @@ cardNameInput.addEventListener('input', ()=> {
     }
 });
 
+cardNumberInput.addEventListener('paste', e => {
+    e.preventDefault()
+    const paste = e.clipboardData.getData('text').replaceAll(' ', '').split('')
+    pattern.forEach((item , index) => {
+        if(signs.includes(item)) {
+            paste.splice(index, 0, item)
+        }
+    })
+    cardNumberInput.value = paste.join('');
+})
+
 cardNumberInput.addEventListener('keypress', e => {
     if(cardNumberInput.value.length == 19) {
         return
